@@ -6,7 +6,7 @@ const Popular = props => {
     return (
         <SafeAreaView style={styles.screen}>
             <View style={styles.pageCont}>
-                <Text>Hi From Popular @ahmedsamir</Text>
+                <Text>Ahmed Samir</Text>
             </View>
         </SafeAreaView>
     );

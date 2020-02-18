@@ -10,7 +10,7 @@ const ExploreCity = props => {
         // SafeAreaView Used To Fix Design In Notch Screen Phones
         <SafeAreaView style={styles.screen}>
             <View style={styles.pageCont}>
-                <Text>Hi From Explore City @ahmedsamir</Text>
+                <Text>Ahmed Samir</Text>
             </View>
         </SafeAreaView>
     );

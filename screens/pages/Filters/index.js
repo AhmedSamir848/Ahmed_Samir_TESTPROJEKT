@@ -12,7 +12,7 @@ const Filters = props => {
                 placeholder="Type location"
             />
             <View style={styles.pageCont}>
-                <Text>Hi From Filters @ahmedsamir</Text>
+                <Text>Ahmed Samir</Text>
             </View>
         </SafeAreaView>
     );

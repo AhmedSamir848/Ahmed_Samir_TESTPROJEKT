@@ -1,6 +1,6 @@
 /* Libraries That Needed */
 import React from 'react';
-import { View, Text,  SafeAreaView } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 import styles from './styles';
 /*************************/
 
@@ -10,7 +10,7 @@ const ViewMap = props => {
     return (
         <SafeAreaView style={styles.screen}>
             <View style={styles.pageCont}>
-                <Text>Hi From View Map @ahmedsamir</Text>
+                <Text>Ahmed Samir</Text>
             </View>
         </SafeAreaView>
     );

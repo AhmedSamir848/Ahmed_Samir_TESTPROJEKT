@@ -15,7 +15,7 @@ const Notifications = props => {
                 placeholder="Type location"
             />
             <View style={styles.pageCont}>
-                <Text>Hi From Notifications @ahmedsamir</Text>
+                <Text>Ahmed Samir</Text>
             </View>
         </SafeAreaView>
     );
