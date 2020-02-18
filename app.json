@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Ahmed_Samir_TESTPROJEKT",
+    "slug": "ahmed_samir_testprojekt",
+    "privacy": "public",
+    "sdkVersion": "36.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "description": "This is the debug version for the task i used expo to facilitate the process of testing the app and avoid the hassle of the different environments configuration . \n\n/* the steps to test the app */\n1- Download Expo App from The Store \n2- scan the QR Code "
+  }
+}
