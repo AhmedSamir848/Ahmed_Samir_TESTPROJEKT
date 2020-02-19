@@ -1,7 +1,7 @@
 /* Libraries That Needed */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { View, Text, ActivityIndicator, ImageBackground, FlatList, Platform, ScrollView, TouchableOpacity, TouchableNativeFeedback } from 'react-native';
+import { View, Text, ActivityIndicator, ImageBackground, FlatList, Platform, ScrollView, TouchableOpacity } from 'react-native';
 import Card from '../../../components/UI/Card';
 import colors from '../../../constants/colors';
 import { fetchFlats } from '../../../store/actions/flats';
@@ -9,7 +9,7 @@ import { fetchFlats } from '../../../store/actions/flats';
 import styles from './styles';
 /********************************/
 
-const NearMe = ({ navigation }) => {
+const NearMe = ({ parentNavigation }) => {
     const dispatch = useDispatch();
     // Get Flats Records From Redux 
     const flats = useSelector(state => state.flats.items);
@@ -25,7 +25,7 @@ const NearMe = ({ navigation }) => {
             <ActivityIndicator size="large" color={colors.accent} />
         </View>;
     }
-    
+
     // Main View
     return (
         <View style={styles.screen}>
@@ -37,14 +37,8 @@ const NearMe = ({ navigation }) => {
                         keyExtractor={(item, index) => 'item' + index.toString()}
                         data={flats}
                         renderItem={({ item }) => {
-                            let TouchableCmp = TouchableOpacity;
-
-                            if (Platform.OS === 'android' && Platform.Version >= 21) {
-                                TouchableCmp = TouchableNativeFeedback;
-                            }
-
                             return <Card style={styles.card}>
-                                <TouchableCmp onPress={() => navigation.navigate('Details', { item })}>
+                                <TouchableOpacity onPress={() => parentNavigation.navigate('flatDetails', { item })}>
                                     <ImageBackground style={styles.cardImage} source={{ uri: item.imageUri }}>
                                         <View style={styles.footer}>
                                             <Text style={[styles.footerText, styles.footerPrice]}>{item.price} </Text>
@@ -52,7 +46,7 @@ const NearMe = ({ navigation }) => {
                                             <Text style={styles.footerText}>{item.subtitle}</Text>
                                         </View>
                                     </ImageBackground>
-                                </TouchableCmp>
+                                </TouchableOpacity>
                             </Card>
                         }}
                     />
@@ -65,15 +59,8 @@ const NearMe = ({ navigation }) => {
                         keyExtractor={(item, index) => 'item' + index.toString()}
                         data={flats}
                         renderItem={({ item }) => {
-                            let TouchableCmp = TouchableOpacity;
-
-                            if (Platform.OS === 'android' && Platform.Version >= 21) {
-                                TouchableCmp = TouchableNativeFeedback;
-                            }
-                            // console.log(item);
-
                             return <Card style={styles.card}>
-                                <TouchableCmp onPress={() => navigation.navigate('Details', { item })}>
+                                <TouchableOpacity onPress={() => parentNavigation.navigate('flatDetails', { item })}>
                                     <ImageBackground style={styles.cardImage} source={{ uri: item.imageUri }}>
                                         <View style={styles.footer}>
                                             <Text style={[styles.footerText, styles.footerPrice]}>{item.price} </Text>
@@ -81,7 +68,7 @@ const NearMe = ({ navigation }) => {
                                             <Text style={styles.footerText}>{item.subtitle}</Text>
                                         </View>
                                     </ImageBackground>
-                                </TouchableCmp>
+                                </TouchableOpacity>
                             </Card>
                         }}
                     />

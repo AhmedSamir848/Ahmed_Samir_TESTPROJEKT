@@ -30,7 +30,7 @@ const Home = ({ navigation }) => {
                     tabStyle={styles.tabStyle}
                     activeTextStyle={styles.activeTextStyle}
                     activeTabStyle={styles.tabStyle}>
-                    <NearMe navigation={navigation} />
+                    <NearMe parentNavigation={navigation} />
                 </Tab>
                 <Tab
                     heading="Explore City"

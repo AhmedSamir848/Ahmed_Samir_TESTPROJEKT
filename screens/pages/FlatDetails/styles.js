@@ -60,10 +60,4 @@ export default StyleSheet.create({
     featureTitleCont: {
         marginHorizontal: 15
     },
-    featureTitle: {
-
-    },
-    featureSubtitle: {
-
-    }
 });

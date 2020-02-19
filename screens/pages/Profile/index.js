@@ -4,8 +4,8 @@ import { View, Text, SafeAreaView, ImageBackground, ScrollView, Switch } from 'r
 import { AntDesign } from '@expo/vector-icons';
 import Button from "react-native-button";
 
-import colors from '../../constants/colors';
-import Input from '../../components/UI/Input';
+import colors from '../../../constants/colors';
+import Input from '../../../components/UI/Input';
 import styles from './styles';
 /****************************/
 

@@ -9,7 +9,7 @@ import { Platform } from 'react-native';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 
 // Screens And Custom Components 
-import { FlatDetails, Profile, Notifications, Filters } from '../screens/';
+import { FlatDetails, Profile, Notifications, Filters, NearMe } from '../screens/';
 import Home from '../screens/pages/Home/';
 import HeaderSearch from '../components/UI/HeaderSearch';
 import colors from '../constants/colors';
@@ -24,8 +24,8 @@ const defaultNavOptions = {
 };
 
 const homeNavigator = createStackNavigator({
-    Home,
-    Details: FlatDetails,
+    nearMe:Home,
+    flatDetails: FlatDetails,
 }, {
     defaultNavigationOptions: defaultNavOptions,
     headerMode: 'none',
